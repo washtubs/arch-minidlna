@@ -41,7 +41,4 @@ fi
 chown -R "${PUID}":"${PGID}" /usr/bin/minidlnad /home/nobody
 chmod -R 775 /usr/bin/minidlnad /home/nobody
 
-echo "[info] Starting Supervisor..."
-
-# run supervisor
-exec /usr/bin/supervisord -c /etc/supervisor.conf -n
+/usr/bin/minidlnad -S -R -f /config/minidlna.conf

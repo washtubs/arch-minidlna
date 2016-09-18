@@ -3,9 +3,6 @@
 # exit script if return code != 0
 set -e
 
-# call aor script (arch official repo)
-source /root/aor.sh
-
 # set media to point at /media docker volume
 sed -i 's/media_dir=\/opt/media_dir=\/media/g' /etc/minidlna.conf
 
