@@ -1,5 +1,7 @@
+# TODO: net=host is insecure but it's needed because docker doesnt support "multicast"
 docker run -d \
-    --net="host" \
+    -p=1900:1900/udp -p=8200:8200/tcp \
+    --net=host \
     --name=minidlna \
     -v /mnt/media:/media \
     -v /etc/localtime:/etc/localtime:ro \

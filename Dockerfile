@@ -19,8 +19,7 @@ RUN chown -R nobody:users /config/
 
 RUN mkdir /home/nobody
 
-#EXPOSE 1900/udp
-#EXPOSE 8200
+EXPOSE 8200/tcp 1900/udp
 
 # run script to set uid, gid and permissions
 CMD ["/bin/bash", "/root/init.sh"]
